@@ -34,7 +34,7 @@ export default class SearchForm extends Component {
                name="search" 
                placeholder="Search..." />
         <button type="submit" id="submit" className="search-button"><i className="material-icons icn-search">search</i></button>
-        <button onClick={this.onSear}>Dog</button>
+        <button onClick={this.onSearchButton}>Dog</button>
       </form>      
     );
   }
