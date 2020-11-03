@@ -14,6 +14,7 @@ export default class SearchForm extends Component {
 
     this.setState({searchText: "dog"});
     e.preventDefault();
+    this.props.onSearch(this.state.searchText)
     e.currentTarget.reset();
 
   }
@@ -33,7 +34,7 @@ export default class SearchForm extends Component {
                name="search" 
                placeholder="Search..." />
         <button type="submit" id="submit" className="search-button"><i className="material-icons icn-search">search</i></button>
-        <button onChange={this.onSearchChange}>Dog</button>
+        <button onClick={this.onSear}>Dog</button>
       </form>      
     );
   }
