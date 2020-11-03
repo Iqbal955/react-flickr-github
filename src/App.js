@@ -27,7 +27,7 @@ this.performSearch()
       
     return axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=7da6019abd1f54417e2f3d9f8fbf4ea6&tags=${query}&per_page=24&format=json&nojsoncallback=1`)
      .then(response => {
-      console.log(response.data.photos.photo);
+      console.log(response.data);
         this.setState({
           images: response.data.photos.photo
          
@@ -52,7 +52,7 @@ this.performSearch()
           <SearchForm onSearch={this.performSearch}/>      
         </div>   
       </div>    
-      <div className="main-content">
+      <div className="photo-container">
         { <ImageList data={this.state.images} />
         }
         
